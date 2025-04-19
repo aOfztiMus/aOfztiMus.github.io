@@ -3,62 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>เครื่องเล่นเพลงคล้าย YouTube</title>
+    <title>เครื่องเล่นเพลงสวยๆ</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="player-container">
-        <div class="video-player">
-            <audio id="mainAudio" src="your-music.mp3"></audio>
-            <div class="video-controls">
-                <div class="progress-area">
-                    <div class="progress-bar">
-                        <span class="current-time">0:00</span>
-                        <input type="range" id="seek-slider" max="100" value="0">
-                        <span class="duration">0:00</span>
-                    </div>
-                </div>
-                <div class="controls">
-                    <button class="play-pause">
-                        <i class="fas fa-play"></i>
-                    </button>
-                    <button class="prev">
-                        <i class="fas fa-backward"></i>
-                    </button>
-                    <button class="next">
-                        <i class="fas fa-forward"></i>
-                    </button>
-                    <div class="volume-control">
-                        <button class="volume-btn">
-                            <i class="fas fa-volume-up"></i>
-                        </button>
-                        <input type="range" id="volume-slider" max="1" min="0" step="0.01" value="1">
-                    </div>
-                    <div class="playback-speed">
-                        <button class="speed-btn">1x</button>
-                        <ul class="speed-options">
-                            <li data-speed="0.5">0.5x</li>
-                            <li data-speed="0.75">0.75x</li>
-                            <li data-speed="1">1x</li>
-                            <li data-speed="1.25">1.25x</li>
-                            <li data-speed="1.5">1.5x</li>
-                            <li data-speed="2">2x</li>
-                        </ul>
-                    </div>
-                    <button class="fullscreen">
-                        <i class="fas fa-expand"></i>
-                    </button>
-                </div>
+    <div class="music-player">
+        <div class="cover">
+            <img id="album-cover" src="default-cover.jpg" alt="Album Cover">
+        </div>
+        <div class="info">
+            <h3 id="song-title">ชื่อเพลง</h3>
+            <p id="artist">ชื่อศิลปิน</p>
+        </div>
+        <div class="progress-area">
+            <div class="current-time">0:00</div>
+            <div class="progress-bar">
+                <input type="range" id="progress" value="0" max="100">
             </div>
+            <div class="duration">0:00</div>
         </div>
-        <div class="playlist-container">
-            <h2>รายการเพลง</h2>
-            <ul class="playlist">
-                <li data-src="song1.mp3" data-title="เพลงที่ 1">เพลงที่ 1 - ศิลปิน 1</li>
-                <li data-src="song2.mp3" data-title="เพลงที่ 2">เพลงที่ 2 - ศิลปิน 2</li>
-                </ul>
+        <div class="controls">
+            <button id="prev"><i class="fas fa-backward"></i></button>
+            <button id="play-pause">
+                <i class="fas fa-play play-icon"></i>
+            </button>
+            <button id="next"><i class="fas fa-forward"></i></button>
         </div>
+        <div class="volume-control">
+            <i class="fas fa-volume-up"></i>
+            <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+        </div>
+        <audio id="audio" src="your-music.mp3"></audio>
     </div>
 
     <script src="script.js"></script>
