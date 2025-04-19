@@ -1,152 +1,23 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
+.audio-player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px;
 }
 
-.music-player {
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    width: 400px;
-    max-width: 90%;
-    text-align: center;
-}
-
-.cover {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 0 auto 20px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-#album-cover {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.info h3 {
-    margin: 0 0 5px;
-    color: #333;
-}
-
-.info p {
-    margin: 0;
-    color: #777;
-    font-size: 0.9em;
-}
-
-.progress-area {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-    font-size: 0.8em;
-    color: #555;
-}
-
-.current-time, .duration {
-    width: 40px;
-    text-align: center;
-}
-
-.progress-bar {
-    flex-grow: 1;
-    background-color: #ddd;
-    border-radius: 5px;
-    height: 5px;
-    margin: 0 10px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-}
-
-#progress {
-    -webkit-appearance: none;
-    appearance: none;
-    background: #4CAF50;
-    border-radius: 5px;
-    height: 5px;
-    width: 100%;
-    cursor: pointer;
-}
-
-#progress::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 12px;
-    height: 12px;
-    background: #4CAF50;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-}
-
-.controls button {
-    background: none;
-    border: none;
-    font-size: 1.5em;
-    color: #333;
-    margin: 0 15px;
-    cursor: pointer;
-}
-
-.controls button:focus {
-    outline: none;
-}
-
-#play-pause {
-    font-size: 2em;
-}
-
-.play-icon::before {
-    content: "\f04b"; /* Font Awesome play icon */
-}
-
-.pause-icon::before {
-    content: "\f04c"; /* Font Awesome pause icon */
-}
-
-.volume-control {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-    color: #555;
-}
-
-.volume-control i {
-    margin-right: 10px;
-}
-
-#volume {
-    -webkit-appearance: none;
-    appearance: none;
-    background: #ddd;
-    border-radius: 5px;
-    height: 5px;
-    flex-grow: 1;
-    cursor: pointer;
-}
-
-#volume::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 12px;
-    height: 12px;
-    background: #333;
-    border-radius: 50%;
-    cursor: pointer;
+.audio-player button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 5px;
+  cursor: pointer;
 }
