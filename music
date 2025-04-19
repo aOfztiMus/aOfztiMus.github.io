@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>เครื่องเล่นเพลง</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .player-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        audio {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #playBtn {
+            background-color: #4CAF50;
+            color: white;
+        }
+        #pauseBtn {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="player-container">
+        <audio id="myAudio" src="your-music.mp3"></audio>
+        <div>
+            <button id="playBtn">เล่น</button>
+            <button id="pauseBtn" disabled>หยุด</button>
+        </div>
+    </div>
+
+    <script>
+        const audio = document.getElementById("myAudio");
+        const playBtn = document.getElementById("playBtn");
+        const pauseBtn = document.getElementById("pauseBtn");
+
+        playBtn.addEventListener("click", function() {
+            audio.play();
+            playBtn.disabled = true;
+            pauseBtn.disabled = false;
+        });
+
+        pauseBtn.addEventListener("click", function() {
+            audio.pause();
+            playBtn.disabled = false;
+            pauseBtn.disabled = true;
+        });
+    </script>
+</body>
+</html>
